@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><label><input type="text" id="input"></label></td>
+        <td><label><select id="from">
+            <option value="1">VietNam</option>
+            <option value="23000">USD</option>
+        </select></label></td>
+        <td><label><select id="to">
+            <option value="23000">USD</option>
+            <option value="1">VietNam</option>
+        </select></label></td>
+        <td><label><input type="button" value="Convert" onclick="changeMoney()"></label></td>
+    </tr>
+</table>
+<p id="result">Result: </p>
+</body>
+<script>
+    function changeMoney() {
+        let input = parseInt(document.getElementById("input").value)
+        let from = parseInt(document.getElementById("from").value)
+        let to = parseInt(document.getElementById("to").value)
+        document.getElementById("result").innerHTML = "<h1>Result: " + (input * from / to).toFixed(3) + "</h1>"
+        alert((input * from / to).toFixed(3))
+    }
+</script>
+</html>

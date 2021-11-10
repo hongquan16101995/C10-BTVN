@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // number chia hết cho 3 => "Code"
+    // number chia hết cho 5 => "Gym"
+    // number chia hết cho 3 và 5 => "CodeGym"
+    let number = parseInt(prompt("nhap gia tri"))
+    if (number % 3 === 0 && number % 5 === 0) {
+        alert("CodeGym")
+    } else if (number % 3 === 0) {
+        alert("Code")
+    } else if (number % 5 === 0) {
+        alert("Gym")
+    }
+</script>
+</body>
+</html>

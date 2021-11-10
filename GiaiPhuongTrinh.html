@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //giải phương trình bậc 2: ax2 + bx + c = 0
+
+    let number1 = +prompt('Nhap so thu nhat: ');
+    let number2 = +prompt('Nhap so thu hai: ');
+    let number3 = +prompt('Nhap so thu ba: ');
+    let delta = (number2 ** 2) - (4 * number1 * number3); //delta = b2 - 4ac
+    if (number1 === 0) { //Math.pow(cơ số, số mũ): lũy thừa của số
+        if (number2 === 0) {
+            if (number3 === 0){
+                alert('Phuong trinh vo so nghiem');
+            } else {
+                alert('Phuong trinh vo nghiem');
+            }
+        } else {
+            let x = - (number3 / number2).toFixed(4); //đưa phương trình về pt bậc nhất: nghiệm duy nhất là: -c/b
+            alert('Phuong trinh co nghiem la: ' + x);
+        }
+    }
+    else if (delta > 0) { //Math.sqrt(number): lấy căn bậc 2 của number
+        let x1 = ((- number2 + Math.sqrt(delta)) / (2 * number1)).toFixed(4); //(-b + căn delta) / 2a
+        let x2 = ((- number2 - Math.sqrt(delta)) / (2 * number1)).toFixed(4); //(-b - căn delta) / 2a
+        alert('Phuong trinh co 2 nghiem la: ' + x1 + ' va  ' + x2);
+    }
+    else if (delta === 0) {
+        let x = ((- number2) / (2 * number1)).toFixed(4); //pt có nghiệm duy nhất: -b / 2a
+        alert('Phuong trinh co nghiem kep la: ' + x);
+    } else {
+        alert('Phuong trinh vo nghiem');
+    }
+</script>
+</body>
+</html>
